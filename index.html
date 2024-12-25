@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Game"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Game</title>
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper">
+        <div id="reelsWrapper" class="reelsWrapper">
+            <div id="allReels" class="allReels">
+                <div class="reel">
+                    <div id="animatedDiv0" class="animatedDiv"></div>
+                </div>
+                <div class="reel">
+                    <div id="animatedDiv1" class="animatedDiv"></div>
+                </div>
+                <div class="reel">
+                    <div id="animatedDiv2" class="animatedDiv"></div>
+                </div>
+                <div class="reel">
+                    <div id="animatedDiv3" class="animatedDiv"></div>
+                </div>
+                <div class="reel">
+                    <div id="animatedDiv4" class="animatedDiv"></div>
+                </div>
+            </div>
+        </div>
+        <button id="spinButton" type="button" class="spinButton">SPIN</button>
+    </div>
+    <script src="index.js"></script>
+    </body>
+</html>

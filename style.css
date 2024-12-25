@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    background-image: url('./images/Landscape.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reelsWrapper {
+    background-image: url(./images/Reels.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px 350px;
+    height: 350px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allReels {
+    width: 500px;
+    height: 300px;
+    display:flex;
+}
+
+.reel {
+    width: 100px;
+    height: 300px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.animatedDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.active {
+    animation-name: animation;
+    animation-duration: 2500ms;
+    animation-iteration-count: 1;
+}
+
+.reverse {
+    animation-name: reverseAnimation;
+    animation-duration: 2500ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes animation {
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-5800px)
+    }
+}
+
+@keyframes reverseAnimation {
+    from {
+        transform: translateY(-5800px)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+.animationDelay0 {
+    animation-delay: 0ms;
+}
+
+.animationDelay5 {
+    animation-delay: 500ms;
+}
+
+.animationDelay10 {
+    animation-delay: 100ms;
+}
+
+.animationDelay15 {
+    animation-delay: 150ms;
+}
+
+.animationDelay20 {
+    animation-delay: 200ms;
+}
+
+.animationTiming1 {
+    animation-timing-function: cubic-bezier(0,0,1,1);
+}
+
+.animationTiming2 {
+    animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+
+.animationTiming3 {
+    animation-timing-function: cubic-bezier(0.42,0,1,1);
+}
+
+.animationTiming4 {
+    animation-timing-function: cubic-bezier(0,0,0.58,1);
+}
+
+.animationTiming5 {
+    animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+}
+
+.animationTiming6 {
+    animation-timing-function: linear;
+}
+
+.animationTiming7 {
+    animation-timing-function: ease;
+}
+
+.animationTiming8 {
+    animation-timing-function: ease-in;
+}
+
+.animationTiming9 {
+    animation-timing-function: ease-out;
+}
+
+.animationTiming10 {
+    animation-timing-function: ease-in-out;
+}
+
+.symbolImage {
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+}
+
+/*
+.spinButton {
+    width: 250px;
+    padding: 20px;
+    font-size: large;
+    margin: 20px;
+    background-color: cornsilk;
+    border-radius: 25px;
+    text-decoration: none;
+}
+    */
+
+.spinButton {
+    background-image: url('./images/Spin\ Button\ Normal.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 125px 125px;
+    background-color: transparent;
+    width: 125px;
+    height: 125px;
+    border: none;
+    color: burlywood;
+    font-weight: bolder;
+    font-size: 1.5em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-top: 5px;
+}
