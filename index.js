@@ -7,6 +7,7 @@ let spinCount = 0;
 const animationDelays = ["animationDelay0", "animationDelay5", "animationDelay10", "animationDelay15", "animationDelay20"];
 const animationTiming = ["animationTiming1", "animationTiming2", "animationTiming3", "animationTiming4", "animationTiming5", "animationTiming6", "animationTiming7", "animationTiming8", "animationTiming9", "animationTiming10"];
 const viewportHeight = window.innerHeight;
+const viewportWidth = window.innerWidth;
 const helper = document.getElementById("helper"); 
 
 //event listeners
@@ -29,7 +30,7 @@ function spin() {
         d.animationDelay = animationDelays[4] //animationDelays[Math.floor(Math.random() * animationDelays.length)];
         d.animationTiming = animationTiming[2] //animationTiming[Math.floor(Math.random() * animationTiming.length)];
         spinCount++
-        helper.innerText = helper.innerText + key + d.animationDirection + d.animationDelay + d.animationTiming + viewportHeight + "\n";
+        helper.innerText = helper.innerText + key + d.animationDirection + d.animationDelay + d.animationTiming + viewportHeight + viewportWidth + "\n";
         fillReel(d, numSymbols, key, d.animationDirection)
         d.animationDirection ? d.setAttribute("style", "transform: translateY(0)") : d.setAttribute("style", `transform: translateY(-${(viewportHeight / 100 * 10) * 58}px`);
         d.animationDirection ? d.classList.add("active", d.animationDelay, d.animationTiming) : d.classList.add("reverse", d.animationDelay, d.animationTiming);
