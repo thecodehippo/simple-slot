@@ -1,11 +1,12 @@
 // config
-const numLines = 3;
+const numLines = 6;
 const numReels = 5;
 const numSymbols = 58;
 const numImages = 11;
 let spinCount = 0;
 const animationDelays = ["animationDelay0", "animationDelay5", "animationDelay10", "animationDelay15", "animationDelay20"];
 const animationTiming = ["animationTiming1", "animationTiming2", "animationTiming3", "animationTiming4", "animationTiming5", "animationTiming6", "animationTiming7", "animationTiming8", "animationTiming9", "animationTiming10"];
+const viewportHeight = window.innerHeight;
 
 //event listeners
 const spinButton = document.getElementById("spinButton");
@@ -27,7 +28,7 @@ function spin() {
         d.animationTiming = animationTiming[Math.floor(Math.random() * animationTiming.length)];
         spinCount++
         fillReel(d, numSymbols, key, d.animationDirection)
-        d.animationDirection ? d.setAttribute("style", "transform: translateY(0)") : d.setAttribute("style", "transform: translateY(-5800px)");
+        d.animationDirection ? d.setAttribute("style", "transform: translateY(0)") : d.setAttribute("style", `transform: translateY(-${(viewportHeight / 100 * 10) * 58}px`);
         d.animationDirection ? d.classList.add("active", d.animationDelay, d.animationTiming) : d.classList.add("reverse", d.animationDelay, d.animationTiming);
         d.addEventListener("animationend",() => {
             d.setAttribute("style", "transform: translateY(0)");
