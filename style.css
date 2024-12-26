@@ -43,19 +43,19 @@ body {
 
 .animatedDiv {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
 }
 
 .active {
     animation-name: animation;
-    animation-duration: 5000ms;
+    animation-duration: 2500ms;
     animation-iteration-count: 1;
 }
 
 .reverse {
     animation-name: reverseAnimation;
-    animation-duration: 5000ms;
+    animation-duration: 2500ms;
     animation-iteration-count: 1;
 }
 
