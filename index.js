@@ -25,9 +25,9 @@ function loadReels() {
 function spin() {
     helper.innerText = ""
     animatedDivs.forEach((d, key) => {
-        d.animationDirection = Math.random() < 0.5;
-        d.animationDelay = animationDelays[Math.floor(Math.random() * animationDelays.length)];
-        d.animationTiming = animationTiming[Math.floor(Math.random() * animationTiming.length)];
+        d.animationDirection = false //Math.random() < 0.5;
+        d.animationDelay = animationDelays[4] //animationDelays[Math.floor(Math.random() * animationDelays.length)];
+        d.animationTiming = animationTiming[2] //animationTiming[Math.floor(Math.random() * animationTiming.length)];
         spinCount++
         helper.innerText = helper.innerText + key + d.animationDirection + d.animationDelay + d.animationTiming + viewportHeight + "\n";
         fillReel(d, numSymbols, key, d.animationDirection)
