@@ -32,8 +32,8 @@ function spin() {
         spinCount++
         helper.innerText = helper.innerText + key + d.animationDirection + d.animationDelay + d.animationTiming + viewportHeight + viewportWidth + "\n";
         fillReel(d, numSymbols, key, d.animationDirection)
-        d.animationDirection ? d.setAttribute("style", "transform: translateY(0)") : d.setAttribute("style", `transform: translateY(-${(viewportHeight / 100 * 10) * 58}px`);
         d.animationDirection ? d.classList.add("active", d.animationDelay, d.animationTiming) : d.classList.add("reverse", d.animationDelay, d.animationTiming);
+        d.animationDirection ? d.setAttribute("style", "transform: translateY(0)") : d.setAttribute("style", `transform: translateY(-${(viewportHeight / 100 * 10) * 58}px`);
         d.addEventListener("animationend",() => {
             d.setAttribute("style", "transform: translateY(0)");
             d.animationDirection ? d.classList.remove("active", d.animationDelay, d.animationTiming) : d.classList.remove("reverse", d.animationDelay, d.animationTiming);
