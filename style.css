@@ -53,13 +53,13 @@ body {
 
 .active {
     animation-name: animation;
-    animation-duration: 2500ms;
+    animation-duration: 5000ms;
     animation-iteration-count: 1;
 }
 
 .reverse {
     animation-name: reverseAnimation;
-    animation-duration: 2500ms;
+    animation-duration: 5000ms;
     animation-iteration-count: 1;
 }
 
