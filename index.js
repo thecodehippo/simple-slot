@@ -39,6 +39,7 @@ function spin() {
                 d.animationDirection ? d.removeChild(d.firstChild) :  d.removeChild(d.lastChild);
             }
         })
+        //animateSymbols();
     })
 }
 
@@ -78,7 +79,43 @@ function fillReel(animatedDiv, numSymbolsToAdd, animatedDivKey, animationDirecti
         let image = document.createElement("IMG");
         let symbolImage = randomImage();
         image.setAttribute("src", `images/${symbolImage}.png`);
+        //symbolImage === "A" ? image.setAttribute("id", "A") : image.setAttribute("src", `images/${symbolImage}.png`);
         image.setAttribute("class", "symbolImage");
         animationDirection ? animatedDiv.appendChild(image) : animatedDiv.insertBefore(image, animatedDiv.firstChild);
     }
+}
+
+function animateSymbols() {
+    const aFrames = [
+        "animatedSymbols/A/A 01.png",
+        "animatedSymbols/A/A 02.png",
+        "animatedSymbols/A/A 03.png",
+        "animatedSymbols/A/A 04.png",
+        "animatedSymbols/A/A 05.png",
+        "animatedSymbols/A/A 06.png",
+        "animatedSymbols/A/A 07.png",
+        "animatedSymbols/A/A 08.png",
+        "animatedSymbols/A/A 09.png",
+        "animatedSymbols/A/A 10.png",
+        "animatedSymbols/A/A 11.png",
+        "animatedSymbols/A/A 12.png",
+        "animatedSymbols/A/A 13.png",
+        "animatedSymbols/A/A 14.png",
+        "animatedSymbols/A/A 15.png",
+        "animatedSymbols/A/A 16.png"
+    ];
+    
+    const As = document.querySelectorAll("#A");
+
+    let currentFrame = 0;
+
+    function updateFrame() {
+        currentFrame = (currentFrame + 1) % aFrames.length; // Loop back to the first frame
+        As.forEach(A => {
+            A.src = aFrames[currentFrame];
+        })
+    }
+
+    setInterval(updateFrame, 50);
+
 }
