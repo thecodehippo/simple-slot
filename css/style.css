@@ -1,0 +1,129 @@
+body {
+    max-width: 480px;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    margin: 0;
+}
+
+header {
+    background-color: red;
+    height: 387px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+    margin: 10px 5px;
+}
+
+.balance-deposit {
+    display: flex;
+    width: 40vw;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.profile {
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.balance {
+    width: 20vw;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.05em;
+}
+
+.nav-logo {
+    display: flex;
+}
+
+.burger-menu {
+  font-size: 36px;
+  background: none;
+  border: none;
+  padding: 0 5px 0 10px;
+}
+
+.search-wrapper {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.search-container {
+    width: 90vw;
+    border-radius: 6px;
+    height: 45px;
+    display: flex;
+    border: 1px solid black;
+}
+
+.search {
+    background-color: white;
+    line-height: 45px;
+    color: grey;
+    padding-left: 10px;
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 14px;
+    border: none;
+}
+
+.search-icon {
+    font-size: 26px;
+    background-color: aliceblue;
+    border: none;
+    padding: 5px;
+    width: 50px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.carousel {
+  width: 100vw; /* Carousel takes 90% of the viewport width */
+  overflow: hidden; /* Hide overflowing cards */
+  background-color: blue;
+  position: relative;
+  height: 250px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    margin: 25px 0 25px 15px;
+}
+
+.card {
+  flex: 0 0 calc(100% / 1.5); /* Show 1.5 cards at a time */
+  margin-right: 10px; /* Optional: space between cards */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  padding: 25px;
+  font-size: 18px;
+  user-select: none; /* Disable text selection during swipe */
+  height: 150px;
+}
+
+/* Optional: Adjust margins for better visuals */
+.card:last-child {
+  margin-right: 0;
+}

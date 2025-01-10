@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Game"
+      content="Home"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -25,31 +25,36 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Game</title>
+    <title>Home</title>
   </head>
   <body>
-    <div id="wrapper" class="wrapper">
-      <div id="reelsWrapper" class="reelsWrapper">
-          <div id="allReels" class="allReels">
-              <div class="reel">
-                  <div id="animatedDiv0" class="animatedDiv"></div>
-              </div>
-              <div class="reel">
-                  <div id="animatedDiv1" class="animatedDiv"></div>
-              </div>
-              <div class="reel">
-                  <div id="animatedDiv2" class="animatedDiv"></div>
-              </div>
-              <div class="reel">
-                  <div id="animatedDiv3" class="animatedDiv"></div>
-              </div>
-              <div class="reel">
-                  <div id="animatedDiv4" class="animatedDiv"></div>
-              </div>
-          </div>
+    <header>
+      <div class="topbar">
+        <div class="nav-logo">
+          <button type="button" class="burger-menu">☰</button>
+          <img class="logo" src="./images/home/hippo-logo.svg" alt="logo" />
+        </div>
+        <div class="balance-deposit">
+          <div class="balance" type="button">£500.00</div>
+          <img class="profile" src="./images/home/profile-user.png" alt="profile" />
+        </div>
       </div>
-      <button id="spinButton" type="button" class="spinButton">SPIN</button>
-    </div>
-    <script src="index.js"></script>
-    </body>
+      <div class="search-wrapper">
+        <div class="search-container">
+          <input type="text" class="search" placeholder="Search Playground Casino">
+          <button type="button" class="search-icon">🔍</button>
+        </div>
+      </div>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="card">Card 1</div>
+          <div class="card">Card 2</div>
+          <div class="card">Card 3</div>
+          <div class="card">Card 4</div>
+          <div class="card">Card 5</div>
+        </div>
+      </div>
+    </header>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

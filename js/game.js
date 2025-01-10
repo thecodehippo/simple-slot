@@ -29,7 +29,7 @@ function spin() {
         d.animationTiming = animationTiming[Math.floor(Math.random() * animationTiming.length)];
         spinCount++
         fillReel(d, numSymbols, key, d.animationDirection);
-        d.animationDirection ? d.setAttribute("style", "transform: translateY(0)") : d.setAttribute("style", `transform: translateY(-4176px`);
+        d.animationDirection ? d.setAttribute("style", "transform: translateY(0)") : d.setAttribute("style", `transform: translateY(-3480px`);
         d.animationDirection ? d.classList.add("active", d.animationDelay, d.animationTiming) : d.classList.add("reverse", d.animationDelay, d.animationTiming);
         d.addEventListener("animationend",() => {
             d.setAttribute("style", "transform: translateY(0)");
@@ -78,12 +78,14 @@ function fillReel(animatedDiv, numSymbolsToAdd, animatedDivKey, animationDirecti
     for(let i = 0; i < numSymbolsToAdd; i++) {
         let image = document.createElement("IMG");
         let symbolImage = randomImage();
-        image.setAttribute("src", `images/${symbolImage}.png`);
+        image.setAttribute("src", `../images/game/${symbolImage}.png`);
         //symbolImage === "A" ? image.setAttribute("id", "A") : image.setAttribute("src", `images/${symbolImage}.png`);
         image.setAttribute("class", "symbolImage");
         animationDirection ? animatedDiv.appendChild(image) : animatedDiv.insertBefore(image, animatedDiv.firstChild);
     }
 }
+
+
 
 function animateSymbols() {
     const aFrames = [
