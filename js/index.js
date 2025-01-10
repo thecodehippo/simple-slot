@@ -20,14 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function startDrag(e) {
     isDragging = true;
     startX = getPositionX(e);
-    track.style.transition = 'transform 0s linear'; // Disable smooth movement during drag
+    track.style.transition = 'transform 0s ease-in-out'; // Disable smooth movement during drag
   }
 
   function drag(e) {
     if (!isDragging) return;
     const currentPosition = getPositionX(e);
     currentTranslate = prevTranslate + currentPosition - startX;
-    track.style.transform = `translateX(${currentTranslate}px)`;
+    //track.style.transform = `translateX(${currentTranslate}px)`;
+    if(currentTranslate < prevTranslate) {
+      track.style.transform = `translateX(${currentTranslate - 50}px)`;
+    } else track.style.transform = `translateX(${currentTranslate + 50}px)`;
   }
 
   function endDrag() {
@@ -43,9 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function snapToClosestCard() {
     const closestIndex = Math.round(-currentTranslate / cardWidth);
-
-    console.log(currentTranslate);
-    console.log(-(cardWidth * (cards.length - 1)));
 
     if(currentTranslate > 0 || currentTranslate < -(cardWidth * (cards.length - 1))) {
 
