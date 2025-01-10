@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: red;
-    height: 387px;
+    height: 357px;
 }
 
 .topbar {
@@ -102,15 +102,15 @@ header {
 .carousel {
   width: 100vw; /* Carousel takes 90% of the viewport width */
   overflow: hidden; /* Hide overflowing cards */
-  background-color: blue;
+  background-color: red;
   position: relative;
-  height: 250px;
+  height: 220px;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.3s ease-in-out;
-    margin: 25px 0 25px 15px;
+    margin: 5px 0 15px 15px;
 }
 
 .card {

@@ -44,13 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
   function snapToClosestCard() {
     const closestIndex = Math.round(-currentTranslate / cardWidth);
 
-    // Clamp to valid indices
-    const maxIndex = cards.length - 1;
-    const index = Math.max(0, Math.min(closestIndex, maxIndex));
+    console.log(currentTranslate);
+    console.log(-(cardWidth * (cards.length - 1)));
 
-    // Align carousel to show 1.5 cards
-    currentTranslate = -index * cardWidth;
-    prevTranslate = currentTranslate;
-    track.style.transform = `translateX(${currentTranslate}px)`;
+    if(currentTranslate > 0 || currentTranslate < -(cardWidth * (cards.length - 1))) {
+
+      // Clamp to valid indices
+      const maxIndex = cards.length - 1;
+      const index = Math.max(0, Math.min(closestIndex, maxIndex));
+  
+      // Align carousel to show 1.5 cards
+      currentTranslate = -index * cardWidth;
+      prevTranslate = currentTranslate;
+      track.style.transform = `translateX(${currentTranslate}px)`;
+    }
   }
 });
