@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     currentTranslate = prevTranslate + currentPosition - startX;
     //track.style.transform = `translateX(${currentTranslate}px)`;
     if(currentTranslate < prevTranslate) {
-      track.style.transform = `translateX(${currentTranslate - 50}px)`;
-    } else track.style.transform = `translateX(${currentTranslate + 50}px)`;
+      track.style.transform = `translateX(${currentTranslate - 150}px)`;
+    } else track.style.transform = `translateX(${currentTranslate + 150}px)`;
   }
 
   function endDrag() {
