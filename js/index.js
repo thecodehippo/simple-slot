@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function startDrag(e) {
     isDragging = true;
     startX = getPositionX(e);
-    track.style.transition = 'none'; // Disable smooth movement during drag
+    track.style.transition = 'transform 0s linear'; // Disable smooth movement during drag
   }
 
   function drag(e) {
