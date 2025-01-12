@@ -122,6 +122,21 @@ for(let i = 0; i < 2000; i++) {
 	// Jackpot
 	let jackpot = Math.random() < 0.25;
 
+	// most searched
+	let mostSearched = Math.random() < 0.1;
+
+	// trending
+	let trending = Math.random() < 0.1;
+
+	// hot
+	let hot = Math.random() < 0.1;
+
+	// cold
+	let cold = Math.random() < 0.1;
+
+	// recommended
+	let recommended = Math.random() < 0.1;
+
 	games.push({
 		id: i,
 		gameName: gameName,
@@ -134,9 +149,15 @@ for(let i = 0; i < 2000; i++) {
 		feature: feature,
 		exclusive: exclusive,
 		branded: branded,
+		persistent: persistent,
 		reelLayout: reelLayout,
 		newGame: newGame,
-		jackpot: jackpot
+		jackpot: jackpot,
+		mostSearched: mostSearched,
+		trending: trending,
+		hot: hot,
+		cold: cold,
+		recommended: recommended
 	})
 }
 
