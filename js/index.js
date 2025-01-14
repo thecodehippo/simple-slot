@@ -1,32 +1,16 @@
-//const games = document.getElementById('games');
+const loadingScreen = document.getElementById('loading-screen');
+const content = document.getElementById('games');
 
-//const gameDataFetch = fetch('data/gameData.json', { mode: 'no-cors' })
-//const layoutFetch = fetch('data/layout.json', { mode: 'no-cors' });
+//const gameDataF = fetch('data/gameData.json').then(res => res.json());
+//const layoutF = fetch('data/layout.json').then(res => res.json());
 
-// Path to your JSON file
-const jsonFilePath = './data/gameData.json';
+loadingScreen.style.display = 'block';
+content.style.display = 'none';
 
-// Function to load JSON data
-async function loadJSON() {
-    try {
-        const response = await fetch(jsonFilePath, { mode: 'no-cors' });
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        displayData(data); // Call a function to handle the data
-    } catch (error) {
-        console.error('Error fetching the JSON file:', error);
-    }
+/*
+async function generateContent() {
+    const [gameData, layout] = await Promise.all([gameDataF, layoutF]);
 }
+    */
 
-// Function to display the data on the page
-function displayData(data) {
-    const outputDiv = document.getElementById('games');
-    outputDiv.innerHTML = `
-        <pre>${JSON.stringify(data, null, 2)}</pre>
-    `;
-}
-
-// Call the function to load JSON data when the script runs
-loadJSON();
+//generateContent();
