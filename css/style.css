@@ -29,6 +29,7 @@ header {
 
 section {
     background-color: red;
+    height: 100%;
 }
 
 .topbar {
@@ -118,21 +119,6 @@ section {
     border-bottom-right-radius: 6px;
 }
 
-/*
-.carousel {
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-  height: 170px;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    margin: 5px 0 15px 15px;
-}
-*/
-
 .carousel {
     display: flex;
     overflow-x: scroll;
@@ -158,4 +144,39 @@ section {
     user-select: none; /* Disable text selection during swipe */
     height: 100px;
     width: 250px;
+}
+
+.games {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game-section {
+    width: 90vw;
+    margin: 10px 0;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+.section-title {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    width: 100%;
+    font-size: 12px;
+}
+
+.gameTile {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+.games-wrapper {
+    display: flex;
 }

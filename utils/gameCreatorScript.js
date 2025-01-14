@@ -2,8 +2,8 @@
 
 Put this into html to create button which triggers download of the generated data
 
-<script src="./js/gameCreatorScript.js"></script>
-<button class="data" id="table-container">download</button>
+    <button class="data" id="table-container">download</button>
+    <script src="./utils/gameCreatorScript.js"></script>
 
 */
 
@@ -117,25 +117,25 @@ for(let i = 0; i < 2000; i++) {
 	};
 
 	// New
-	let newGame = Math.random() < 0.1;
+	let newGame = Math.random() < 0.01;
 
 	// Jackpot
-	let jackpot = Math.random() < 0.25;
+	let jackpot = Math.random() < 0.025;
 
 	// most searched
-	let mostSearched = Math.random() < 0.1;
+	let mostSearched = Math.random() < 0.01;
 
 	// trending
-	let trending = Math.random() < 0.1;
+	let trending = Math.random() < 0.01;
 
 	// hot
-	let hot = Math.random() < 0.1;
+	let hot = Math.random() < 0.01;
 
 	// cold
-	let cold = Math.random() < 0.1;
+	let cold = Math.random() < 0.01;
 
 	// recommended
-	let recommended = Math.random() < 0.1;
+	let recommended = Math.random() < 0.01;
 
 	games.push({
 		id: i,
