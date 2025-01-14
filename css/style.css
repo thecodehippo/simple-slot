@@ -118,9 +118,10 @@ section {
     border-bottom-right-radius: 6px;
 }
 
+/*
 .carousel {
-  width: 100vw; /* Carousel takes 90% of the viewport width */
-  overflow: hidden; /* Hide overflowing cards */
+  width: 100vw;
+  overflow: hidden;
   position: relative;
   height: 170px;
 }
@@ -130,34 +131,23 @@ section {
     transition: transform 0.3s ease-in-out;
     margin: 5px 0 15px 15px;
 }
+*/
 
-.carousel2 {
+.carousel {
     display: flex;
     overflow-x: scroll;
     flex-flow: column wrap;
     justify-content: space-evenly;
     height: 170px;
     margin: 5px 0 15px 15px;
+    position: relative;
 }
 
-.carousel2::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
     display: none;
 }
 
 .card {
-  flex: 0 0 calc(100% / 1.5); /* Show 1.5 cards at a time */
-  margin-right: 10px; /* Optional: space between cards */
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  text-align: center;
-  padding: 25px;
-  font-size: 18px;
-  user-select: none; /* Disable text selection during swipe */
-  height: 100px;
-}
-
-.card2 {
     margin-right: 10px; /* Optional: space between cards */
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -168,9 +158,4 @@ section {
     user-select: none; /* Disable text selection during swipe */
     height: 100px;
     width: 250px;
-  }
-
-/* Optional: Adjust margins for better visuals */
-.card:last-child {
-  margin-right: 0;
 }
