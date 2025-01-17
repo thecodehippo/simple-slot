@@ -8,5 +8,15 @@
         "name": "Not New",
         "tagline": "Don't find our best new games",
         "filters": ["newGame"]
+    },
+    {
+        "name": "Slightly Old",
+        "tagline": "Don't find our best new games",
+        "filters": ["newGame"]
+    },
+    {
+        "name": "Little New",
+        "tagline": "Don't find our best new games",
+        "filters": ["newGame"]
     }
 ]

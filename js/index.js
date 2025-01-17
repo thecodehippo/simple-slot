@@ -57,3 +57,15 @@ async function generateContent() {
 
 // Call the function to generate content after the page loads
 generateContent();
+
+let topNav = document.getElementById("icon-nav");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        topNav.style.backgroundColor = '#232323';
+    } else {
+        topNav.style.backgroundColor = '';
+    }
+}

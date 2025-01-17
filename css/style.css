@@ -7,15 +7,9 @@ body {
     margin: 0;
 }
 
-header {
-    height: 357px;
+.main {
     position: relative;
     background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
-}
-
-section {
-    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 100%;
 }
 
 .topbar {
@@ -149,11 +143,10 @@ section {
 }
 
 .game-section {
-    width: 90vw;
-    margin: 10px 0;
     font-weight: bold;
     color: white;
     font-size: 16px;
+    margin: 5px 0 15px 15px;
 }
 
 .section-title {
@@ -168,13 +161,30 @@ section {
 }
 
 .gameTile {
+    margin-right: 10px;
+    background: linear-gradient(to left, #e74c3c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+    user-select: none;
     height: 100px;
-    width: 100px;
-    background-color: blue;
+    width: 250px;
+    color: black;
 }
 
 .games-wrapper {
     display: flex;
+    overflow-x: scroll;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    height: 170px;
+    position: relative;
+}
+
+.games-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .icon-nav {
@@ -184,7 +194,9 @@ section {
     justify-content: space-evenly;
     height: 70px;
     margin: 5px 0 5px 15px;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .icon-nav::-webkit-scrollbar {
