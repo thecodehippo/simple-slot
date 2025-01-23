@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <link rel="icon" href="./images/home/hippo favicon.png" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/launchdarkly-js-client-sdk@3"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -41,10 +43,10 @@
       </div>
       <div class="search-wrapper">
         <div class="search-container">
-          <button type="button" class="search-icon">
+          <button id="myButton" type="button" class="search-icon">
             <img src="./images/home/search.png" />
           </button>
-          <input type="text" class="search" placeholder="Search Playground Casino" />
+          <input type="text" id="search" class="search" placeholder="Search Playground Casino" />
         </div>
       </div>
       <div class="icon-nav" id="icon-nav">
@@ -85,5 +87,7 @@
       </div>
     </div>
     <script src="./js/index.js"></script>
+    <script src="./js/launchdarkly.js"></script>
+    <script src="./js/lunr.js"></script>
   </body>
 </html>
