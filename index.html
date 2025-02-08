@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <link rel="icon" href="./images/home/hippo favicon.png" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/launchdarkly-js-client-sdk@3"></script>
-    <script src="https://unpkg.com/lunr/lunr.js"></script>
+<!--     <script src="https://unpkg.com/launchdarkly-js-client-sdk@3"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -41,7 +41,7 @@
           <img class="profile" src="./images/home/profile.svg" alt="profile" />
         </div>
       </div>
-      <div class="search-wrapper">
+      <div class="search-wrapper" id="search-wrapper">
         <div class="search-container">
           <button id="myButton" type="button" class="search-icon">
             <img src="./images/home/search.png" />
@@ -50,18 +50,24 @@
         </div>
       </div>
       <div class="icon-nav" id="icon-nav">
-        <div class="nav-item">
-          <img class="nav-icon" src="./images/home/Icons/home (1).png" />
-          <div class="icon-name">Home</div>
-        </div>
-        <div class="nav-item">
-          <img class="nav-icon" src="./images/home/Icons/new.png" />
-          <div class="icon-name">New</div>
-        </div>
-        <div class="nav-item">
-          <img class="nav-icon" src="./images/home/Icons/ace-of-spades.png" />
-          <div class="icon-name">Table</div>
-        </div>
+        <a href="/">
+          <div class="nav-item">
+            <img class="nav-icon" src="./images/home/Icons/home (1).png" />
+            <div class="icon-name">Home</div>
+          </div>
+        </a>
+        <a href="./html/subpage.html?page=newGame">
+          <div class="nav-item">
+            <img class="nav-icon" src="./images/home/Icons/new.png" />
+            <div class="icon-name">New</div>
+          </div>
+        </a>
+        <a href="./html/subpage.html?page=table">
+          <div class="nav-item">
+            <img class="nav-icon" src="./images/home/Icons/ace-of-spades.png" />
+            <div class="icon-name">Table</div>
+          </div>
+        </a>
         <div class="nav-item">
           <img class="nav-icon" src="./images/home/Icons/casino-chip (1).png" />
           <div class="icon-name">Live</div>
@@ -72,7 +78,7 @@
         </div>
         <div class="nav-item">
           <img class="nav-icon" src="./images/home/Icons/premium-quality.png" />
-          <div class="icon-name">Exclusive</div>
+          <div class="icon-name">A-Z</div>
         </div>
       </div>
       <div class="carousel">
@@ -86,8 +92,10 @@
       <div class="games" id="games"></div>
       </div>
     </div>
-    <script src="./js/index.js"></script>
-    <script src="./js/launchdarkly.js"></script>
-    <script src="./js/lunr.js"></script>
+    <script src="./js/index.js" type="module"></script>
+<!--     <script src="./js/launchdarkly.js" type="module"></script>
+    <script src="./js/lunr.js" type="module"></script> -->
+    <script src="./js/gameMapper.js" type="module"></script>
+    <script src="./js/navigation.js" type="module"></script>
   </body>
 </html>

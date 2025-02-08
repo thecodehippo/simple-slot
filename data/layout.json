@@ -5,18 +5,23 @@
         "filters": ["newGame"]
     },
     {
-        "name": "Not New",
-        "tagline": "Don't find our best new games",
-        "filters": ["newGame"]
+        "name": "Trending",
+        "tagline": "People are playing now",
+        "filters": ["trending"]
     },
     {
-        "name": "Slightly Old",
-        "tagline": "Don't find our best new games",
-        "filters": ["newGame"]
+        "name": "Jackpots",
+        "tagline": "Huge prizes available in our best jackpot games",
+        "filters": ["jackpot"]
     },
     {
-        "name": "Little New",
-        "tagline": "Don't find our best new games",
-        "filters": ["newGame"]
+        "name": "Hot",
+        "tagline": "People are winning right now",
+        "filters": ["hot"]
+    },
+    {
+        "name": "Exclusive",
+        "tagline": "Exclusive games only found here at casino",
+        "filters": ["exclusive"]
     }
 ]

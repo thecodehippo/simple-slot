@@ -61,13 +61,6 @@ body {
   color: white;
 }
 
-.search-wrapper {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    margin: 10px 0;
-}
-
 .search-container {
     width: 90vw;
     height: 45px;
@@ -101,10 +94,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#myButton {
-    
 }
 
 .search-icon img {
@@ -166,7 +155,8 @@ body {
 
 .gameTile {
     margin-right: 10px;
-    background: linear-gradient(to left, #e74c3c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: linear-gradient(to left, #e74c3c, #000000); */
+    background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     text-align: center;
@@ -174,7 +164,7 @@ body {
     font-size: 18px;
     user-select: none;
     height: 100px;
-    width: 250px;
+    width: 100px;
     color: black;
 }
 
@@ -191,13 +181,22 @@ body {
     display: none;
 }
 
+.search-wrapper {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    padding: 10px 0;
+    position: sticky;
+    z-index: 1;
+}
+
 .icon-nav {
     display: flex;
     overflow-x: scroll;
     flex-flow: column wrap;
     justify-content: space-evenly;
     height: 70px;
-    margin: 5px 0 5px 15px;
+    padding: 5px 0 5px 15px;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -229,4 +228,33 @@ body {
 
 .icon-name {
     margin-top: 10px;
+}
+
+.sub-games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sub-games-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 15px;
+}
+
+.sub-gameTile {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+    user-select: none;
+    height: 100px;
+    width: 100px;
+    color: black;
+    margin: 15px;
 }
